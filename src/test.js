@@ -2,7 +2,7 @@
 export { yes };*/
 
 
-randint = Math.floor(Math.random()*);
+randint = Math.floor(Math.random()*10);
 console.log(laws[0]["q"]);
 
 /*
