@@ -1,6 +1,24 @@
 // webpack.config.js
 const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const htmlWebpackPlugin = require('html-webpack-plugin');
+
+const generateHtmlPlugin = (title) => {
+  return new htmlWebpackPlugin({
+    title,
+    // filename: 'index.html',
+    template: `./src/pages/${title.toLowerCase()}/index.html`,
+  });
+}
+
+const populateHtmlPlugins = (pagesArray) => {
+  res = [];
+  pagesArray.forEach(page => {
+    res.push(generateHtmlPlugin(page));
+  })
+  return res;
+}
+
+const pages = populateHtmlPlugins(["Test"]);
 
 module.exports = {
   mode: "development",
@@ -20,6 +38,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
+      ...pages
   ],
   module: {
     rules: [
