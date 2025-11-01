@@ -4,6 +4,7 @@ if (module.hot) {
 
 import { yes } from "./test.js";
 import "./styles/styles.css";
+import "./styles/mcq.css";
 
 console.log(yes);
 
