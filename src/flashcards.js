@@ -15,6 +15,10 @@ let years = [
         q:"When was the Declaration of Independence signed?",
         a:"1776"
     },
+    {
+        q:"When did the Louisiana Purchase occur?",
+        a:"1803"
+    },
 ];
 
 let names = [
