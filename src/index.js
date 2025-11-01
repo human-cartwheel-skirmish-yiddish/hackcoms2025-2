@@ -3,6 +3,7 @@ if (module.hot) {
 }
 
 import { yes } from "./test.js";
+import "./styles/styles.css";
 
 console.log(yes);
 
