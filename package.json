@@ -1,0 +1,24 @@
+{
+  "name": "hackcoms2025-2",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/human-cartwheel-skirmish-yiddish/hackcoms2025-2#readme",
+  "bugs": {
+    "url": "https://github.com/human-cartwheel-skirmish-yiddish/hackcoms2025-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/human-cartwheel-skirmish-yiddish/hackcoms2025-2.git"
+  },
+  "license": "ISC",
+  "author": "Anna, Matt, Nhi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
+  }
+}
