@@ -11,3 +11,5 @@ clickable buttons
 answers highlighted
 switches to diferent random question when prompted
 */
+export { yes };
+
