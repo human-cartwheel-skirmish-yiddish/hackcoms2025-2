@@ -16,6 +16,7 @@
 #container--answers li {
   list-style-type: none;
   border-style: solid;
+  border-color: black;
 
   width: 200px;
   height: 100px;
@@ -32,7 +33,6 @@
 #container--answers li:hover {
   background-color: gray;
   color: white;
-  border-color: black;
   cursor: pointer;
 }
 
