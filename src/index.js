@@ -8,7 +8,6 @@ import { questionMaking } from "./cqselection";
 
 let points = 0;
 const questionElt = document.getElementById("text--question");
-// const answersElt = document.getElementById("container--answers");
 const answersElt = document
   .getElementById("container--answers")
   .querySelectorAll("li");
@@ -29,13 +28,6 @@ for (let index = 0; index < 4; index++) {
 answersElt.forEach(function (elt) {
   elt.addEventListener("click", () => {
     if (questionsDone < 4) {
-      // let { answers, question, answer } = questionMaking();
-      // questionElt.innerHTML = question;
-
-      // // Populate answers
-      // for (let index = 0; index < 4; index++) {
-      //   answersElt[index].innerHTML = answers[index];
-      // }
       user_answer = elt.innerHTML;
 
       // let user_answer = prompt("What is the answer? (answer in array# 0, 1, 2, or 3)");
