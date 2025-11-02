@@ -11,6 +11,8 @@ const questionElt = document.getElementById("text--question");
 const answersElt = document
   .getElementById("container--answers")
   .querySelectorAll("li");
+const pointsElt = document.getElementById("text--points");
+
 console.log(answersElt, typeof answersElt);
 
 let questionsDone = 0;
@@ -27,6 +29,7 @@ for (let index = 0; index < 4; index++) {
 
 answersElt.forEach(function (elt) {
   elt.addEventListener("click", () => {
+    // console.log(pointsElt.innerHTML);
     if (questionsDone < 4) {
       user_answer = elt.innerHTML;
 
@@ -37,7 +40,8 @@ answersElt.forEach(function (elt) {
       } else {
         console.log("You got it wrong! The correct answer is " + answer);
       }
-      console.log(points);
+      pointsElt.innerHTML = points;
+
 
       if (points == 12) {
         console.log("Congrats, you got the highest possible score!");
