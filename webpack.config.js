@@ -22,7 +22,7 @@ const pages = populateHtmlPlugins(["Test"]);
 
 module.exports = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/cqselection.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),

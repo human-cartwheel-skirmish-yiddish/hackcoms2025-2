@@ -1,9 +1,5 @@
 let years = [
     {
-        q: "What year did WWI start?",
-        a: "1914"
-    },
-    {
         q: "What year did Neil Armstrong became the first person to walk on the moon?",
         a: "1969"
     },
@@ -37,18 +33,10 @@ let names = [
     {
         q: "Who wrote the Declaration of Independence?",
         a: "Thomas Jefferson"
-    },
-    {
-        q: "Who is considered the father of modern Physics?",
-        a: "Albert Einstein"
-    },
+    }
 ];
 
 let laws = [
-    {
-        q: "Which amendment gives the right to bear arms?",
-        a: "2nd Amendment"
-    },
     {
         q: "Which amendment grants freedom of religion, speech, and the press?",
         a: "1st Amendment"
