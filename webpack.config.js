@@ -1,28 +1,10 @@
 // webpack.config.js
 const path = require("path");
-const htmlWebpackPlugin = require('html-webpack-plugin');
-
-const generateHtmlPlugin = (title) => {
-  return new htmlWebpackPlugin({
-    title,
-    // filename: 'index.html',
-    template: `./src/pages/${title.toLowerCase()}/index.html`,
-  });
-}
-
-const populateHtmlPlugins = (pagesArray) => {
-  res = [];
-  pagesArray.forEach(page => {
-    res.push(generateHtmlPlugin(page));
-  })
-  return res;
-}
-
-const pages = populateHtmlPlugins(["Test"]);
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: "development",
-  entry: "./src/cqselection.js",
+  entry: "./src/index.js",
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "dist"),
@@ -38,10 +20,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./src/template.html",
     }),
-      ...pages
   ],
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+        },
+      },
       {
         test: /\.html$/i,
         loader: "html-loader",
@@ -54,13 +42,7 @@ module.exports = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-        },
-      },
+
     ],
   },
 };
