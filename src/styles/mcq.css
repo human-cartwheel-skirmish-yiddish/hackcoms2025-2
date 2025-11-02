@@ -25,6 +25,9 @@
   align-self: center;
 }
 
+#button--continue {
+  display: none;
+}
 
 #container--answers li:hover {
   background-color: gray;
